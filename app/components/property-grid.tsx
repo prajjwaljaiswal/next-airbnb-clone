@@ -10,7 +10,6 @@ import { Badge } from "@/components/ui/badge"
 import { motion } from "framer-motion"
 import { useAuth } from "@/lib/auth"
 import { useToast } from "@/hooks/use-toast"
-import type { FilterOptions } from "@/types/filter-options" // Declare or import FilterOptions
 
 // Mock data for properties
 const allProperties = [
@@ -197,7 +196,7 @@ const allProperties = [
 ]
 
 interface PropertyGridProps {
-  filters?: FilterOptions
+  filters?: any
 }
 
 export function PropertyGrid({ filters }: PropertyGridProps) {
@@ -226,7 +225,7 @@ export function PropertyGrid({ filters }: PropertyGridProps) {
 
     // Filter by amenities
     if (filters.amenities.length > 0) {
-      result = result.filter((property) => filters.amenities.every((amenity) => property.amenities.includes(amenity)))
+      result = result.filter((property) => filters.amenities.every((amenity: any) => property.amenities.includes(amenity)))
     }
 
     // Filter by instant book

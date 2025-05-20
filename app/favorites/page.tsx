@@ -1,4 +1,3 @@
-"use client"
 
 interface Favorite {
   id: number
@@ -6,3 +5,4 @@ interface Favorite {
   location: string
   price: number
   rating: number
+}

@@ -1,0 +1,11 @@
+name = "airbnb"
+compatibility_date = "2025-05-24"
+node_compat = true
+
+[build]
+command = "npm run build"
+watch_dir = "."
+
+[site]
+bucket = "./out"  # Next.js export directory
+entry-point = "./.wrangler"

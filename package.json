@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "next build && npx @cloudflare/next-on-pages",
+    "preview": "npx wrangler pages dev ./out --compatibility-flag=nodejs_compat",
+    "deploy": "npx wrangler pages publish ./out"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
